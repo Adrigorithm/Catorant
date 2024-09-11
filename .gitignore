@@ -1,0 +1,4 @@
+# Services
+## Payment
+services/payment/.venv
+services/payment/__pycache__

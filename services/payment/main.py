@@ -1,15 +1,22 @@
 import logging
 
-class PaymentService:
-    def __init__(self) -> None:
-        self.logger = logging.getLogger(__name__)
+from fastapi import FastAPI
 
-    def run(self) -> None:
-        self.logger.info("Starting payment service...")
-        # Payment stuff
+# Setup logging
+logging.basicConfig(format="[%(levelname)s] - %(message)s", level=logging.DEBUG)
 
-if __name__ == "__main__":
-    logging.basicConfig(format="[%(levelname)s] - %(message)s", level=logging.DEBUG)
+logging.info("Starting payment service...")
 
-    payment_service = PaymentService()
-    payment_service.run()
+# Start API Server
+app = FastAPI()
+
+logging.info("Ready to process transactions.")
+
+# Endpoints
+@app.get("/")
+def get() -> str:
+    return "Hello world!"
+
+@app.get("/transactions")
+def get_transactions() -> list:
+    return ["transaction 1", "transaction 2"]
