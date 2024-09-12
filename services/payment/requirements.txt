@@ -1,1 +1,2 @@
-fastapi[standard]==0.114.0
+grpcio==1.66.1
+grpcio-tools==1.66.1

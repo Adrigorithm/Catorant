@@ -1,22 +1,12 @@
 import logging
 
-from fastapi import FastAPI
 
-# Setup logging
-logging.basicConfig(format="[%(levelname)s] - %(message)s", level=logging.DEBUG)
+def main():
+    logging.info("Starting payment service...")
+    pass
 
-logging.info("Starting payment service...")
+if __name__ == "__main__":
+    # Setup logging
+    logging.basicConfig(format="[%(levelname)s] - %(message)s", level=logging.DEBUG)
 
-# Start API Server
-app = FastAPI()
-
-logging.info("Ready to process transactions.")
-
-# Endpoints
-@app.get("/")
-def get() -> str:
-    return "Hello world!"
-
-@app.get("/transactions")
-def get_transactions() -> list:
-    return ["transaction 1", "transaction 2"]
+    main()
