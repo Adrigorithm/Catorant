@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+// I might need to care about valua - I am not sure yet.
+message PaymentRequest {
+    float amount = 1; // negative values can be used for chargebacks or refunds
+}
+
+message PaymentResponse {
+    bool success = 1;
+    optional string error = 2;
+}

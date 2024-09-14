@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "start payment service",
+            "label": "compile payment proto",
             "type": "shell",
-            "command": "fastapi dev ./services/payment/main.py"
+            "command": "protoc --proto_path=services/protos/payment --python_out=services/payment/generated"
         }
     ]
 }
