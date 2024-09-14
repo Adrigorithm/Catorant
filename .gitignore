@@ -2,3 +2,4 @@
 ## Payment
 services/payment/.venv
 services/payment/__pycache__
+services/payment/generated
