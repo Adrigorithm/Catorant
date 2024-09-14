@@ -7,4 +7,10 @@ A webshop packed with features ~~(not at the time of writing this)~~ built speci
 ### K8s
 `...`
 
+## Development
+### Docker
+`...`
+### Nix
+`...`
+
 ## Contributions
