@@ -6,7 +6,7 @@
         {
             "label": "compile payment proto",
             "type": "shell",
-            "command": "python -m grpc_tools.protoc --proto_path=services/protos/payment --python_out=services/payment/generated --pyi_out=services/payment/generated --grpc_python_out=services/payment/generated services/protos/payment/payment.proto"
+            "command": "nix-shell -p python312 python312Packages.grpcio-tools --run 'python3 -m grpc_tools.protoc --proto_path=services/protos/payment --python_out=services/payment/src/generated --pyi_out=services/payment/src/generated --grpc_python_out=services/payment/src/generated services/protos/payment/payment.proto'"
         }
     ]
 }

@@ -1,5 +1,5 @@
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
     # nativeBuildInputs is usually what you want -- tools you need to run
-    nativeBuildInputs = with pkgs.buildPackages; [ python3 python312Packages.grpcio python312Packages.grpcio-tools ];
+    nativeBuildInputs = with pkgs.buildPackages; [ python312 python312Packages.grpcio python312Packages.grpcio-tools ];
 }
