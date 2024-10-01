@@ -4,7 +4,7 @@ from concurrent import futures
 import logging
 import grpc
 
-from generated import payment_pb2_grpc
+from src.generated import payment_pb2_grpc
 from src import Payment
 
 
