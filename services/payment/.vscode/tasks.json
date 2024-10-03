@@ -1,0 +1,12 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile payment proto",
+            "type": "shell",
+            "command": "nix-shell -p python python312Packages.grpcio-tools --run `python -m grpc_tools.protoc --proto_path=../protos/payment --python_out=src/generated --pyi_out=src/generated --grpc_python_out=src/generated ../protos/payment/payment.proto`"
+        }
+    ]
+}
