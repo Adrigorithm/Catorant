@@ -10,9 +10,10 @@ from src import Payment
 
 def main() -> None:
     logging.info("Starting payment service...")
-    pass
+    serve()
 
 def serve(port: int = 20001, max_instances: int = 20) -> None:
+    
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=max_instances))
     payment_pb2_grpc.add_PaymentServicer_to_server(Payment(), server)
     server.add_insecure_port(f"[::]:{port}")
