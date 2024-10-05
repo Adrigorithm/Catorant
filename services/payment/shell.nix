@@ -4,8 +4,6 @@ let
   lib = pkgs.lib;
   vscodeExtensions = [
     "ms-python.python"
-    "ms-python.vscode-pylance"
-    "ms-python.debugpy"
   ];
 in
 pkgs.mkShell {
