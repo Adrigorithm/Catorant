@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 service Payment {
-    rpc CreatePayment (PaymentRequest) returns (PaymentResponse) {}
+    rpc CreatePayment (PaymentRequest) returns (PaymentReply) {}
 }
 
 // I might need to care about valua - I am not sure yet.
@@ -9,7 +9,7 @@ message PaymentRequest {
     float amount = 1; // negative values can be used for chargebacks or refunds
 }
 
-message PaymentResponse {
+message PaymentReply {
     bool success = 1;
     optional string error = 2;
 }
